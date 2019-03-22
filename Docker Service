@@ -1,0 +1,11 @@
+1) Creating a service using overlay network:
+	> docker service create --name service_name --network my-overlay-net --replicas 2 image_name
+
+2) Entering into the container.........
+	> docker exec -it <container-id> /bin/bash
+
+3) For checking service logs :
+	> docker service logs <service-name>
+
+4) To list services
+	> docker service ls
