@@ -1,0 +1,15 @@
+1) To check images present in docker repo 
+ -> docker images
+ -> docker image ls
+
+2) To build a dockerfile we need atleast one image (scratch, alpine-java ...etc  we use alpine java. small and better for our projects)
+ -> docker build -t tagname-for-the-image .
+
+	here -t is used for tagging (giving a name to the image)
+ 
+3) Saving the image as a .tar file (Export from repository)
+	-> docker save image-name > image.tar
+
+4) Loading the image from .tar (Import in repository)
+	->docker load --input xyz.tar
+  
