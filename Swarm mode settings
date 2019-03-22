@@ -38,3 +38,11 @@
 
 	d) For removing node from manager when node is down
     > docker node rm <node-id>
+    
+6) To see name of a host in cluster
+	> docker system info --format '{{.Name}}'
+
+7) To list down all host(node) in cluster (only work for manager node)
+	> docker node ls
+8) To set command sets some environment variables necessary for the local Docker client to find the remote Docker host, and to configure TLS-encrypted communication, whilst the second queries the remote Docker daemon for the host's name.	
+	> eval $(docker-machine env node-01)
