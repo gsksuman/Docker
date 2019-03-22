@@ -1,0 +1,4 @@
+ > docker cp <container id>:<from location> <to location>
+	
+ > docker cp <from location> <container-id>:<to location>
+	
