@@ -1,0 +1,16 @@
+1) Overlay network
+--------------------------------------------------------
+Create an overlay network (used for multiple host(docker-deamons))
+ > docker network create --driver overlay my-overlay-net
+
+2) Create a bridge network
+-------------------------------------------------------
+ > docker network create --subnet *.*.0.0/16 <network name>
+   - Attach user defined network and static IP address to container
+      docker run --network=<network name> --ip=*.*.*.* -it --name=<container name> <image name>
+
+3) Create a ipv6 bridge network
+  > docker network create --ipv6 --subnet *:*:*:*:*:0:0:*/126 --subnet *.*.0.0/16 ipv6Network
+
+4) Attach and run ipv6 bridge network
+  > docker run --network=ipv6Network --ip=*:*:*:*:*::* --ip=*.*.*.* -p *.*.*.*:8980:9999  --name=<container name> <image name>
