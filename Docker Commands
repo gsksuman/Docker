@@ -1,4 +1,11 @@
-1.docker version 
- -> docker -v
+1) docker version 
+ > docker -v
+
+2) For removing all containers with status=exited
+	> docker rm $(docker ps -q -f status=exited)
+
+3) For listing all process 
+ > docker ps -a
  
+4)  
  
