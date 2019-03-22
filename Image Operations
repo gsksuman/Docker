@@ -13,3 +13,10 @@
 4) Loading the image from .tar (Import in repository)
 	->docker load --input xyz.tar
   
+5) Docker export/emport
+	> docker -o <file name>.tar.gz <image name>
+	> docker import <file name>.tar.gz <image name>
+
+6) Docker Save/Load
+	> docker save -o ./<file name>.tar.gz <image name>
+	> docker load -i <file name>.tar.gz
