@@ -1,0 +1,40 @@
+1) Initialization of a docker swarm 
+	> docker swarm init 
+	
+2) For help use --help at the end.
+	> docker swarm init --help
+	
+  Example:
+	> docker swarm init --advertise-addr <ip>
+	Swarm initialized: current node (fdkjghd8347hdsjgh38) is now a manager.
+
+3) To add a worker node in this swarm, run the following command:
+	> docker swarm join --token <swarm manager tocken id> <manager ip>:2377
+
+4) To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+   4.2. To add a worker to this swarm just copy and paste above command in the worker node.
+	   > docker swarm join --token <swarm manager tocken id> <manager ip>:2377
+
+   4.3 To add manager to this swarm.
+	
+    	4.3.1 find the manager token.
+		   > docker swarm join-token -q manager
+
+	    4.3.2 join this node to another manager node as a manager.
+		   > docker swarm join --token <token id> <host-ip>:2377
+
+
+5) Node Operation:
+	
+	a) For checking nodes in the cluster
+    > docker node ls
+	
+	b) For promoting node as a manager
+    > docker node promote (node-id)
+	
+	c) For demoting node as a manager
+    > docker node demote (node-id)
+
+	d) For removing node from manager when node is down
+    > docker node rm <node-id>
