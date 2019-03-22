@@ -44,5 +44,12 @@
 
 7) To list down all host(node) in cluster (only work for manager node)
 	> docker node ls
+	
 8) To set command sets some environment variables necessary for the local Docker client to find the remote Docker host, and to configure TLS-encrypted communication, whilst the second queries the remote Docker daemon for the host's name.	
 	> eval $(docker-machine env node-01)
+	
+To remove from swarm 
+9 ) First we have leave worker node from cluster so go to node and fire 
+	> docker swarm leave
+10 ) Then In manager fire command to leave 
+        > docker node rm  	
