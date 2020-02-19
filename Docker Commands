@@ -2,10 +2,25 @@
  > docker -v
 
 2) For removing all containers with status=exited
-	> docker rm $(docker ps -q -f status=exited)
+ > docker rm $(docker ps -q -f status=exited)
 
 3) For listing all process 
  > docker ps -a
  
-4)  
+4) To list all images
+ > docker image ls
  
+5) To create container
+ > docker create <image name>
+ > docker create --network ingress --ip <ip> <image name> // with ip and network
+ > docker create --network my-overlay-net --ip <ip> <image name>
+ One container will be created.
+ 
+6) To start container
+ > docker start <container id>
+ 
+7) To display all conyainer
+ > docker container ls -a
+ 
+8) To go inside a container
+ > docker exec -it <container id> /bin/bash
